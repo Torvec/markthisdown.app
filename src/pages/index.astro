@@ -10,22 +10,81 @@ import "../styles/global.css";
     <meta name="generator" content={Astro.generator} />
     <title>MarkThisDown Editor</title>
   </head>
-  <body
-    class="bg-gradient-to-b from-blue-900 to-blue-950 min-h-screen text-white pt-16"
-  >
+  <body class="bg-neutral-900">
     <div
-      class="container mx-auto bg-gradient-to-br from-purple-950 to-slate-950 max-w-5xl py-16 space-y-4 shadow-2xl rounded-4xl"
+      class="grid grid-cols-1 grid-rows-[minmax(30px,_60px)_minmax(400px,_6fr)_minmax(30px,_60px)] min-h-dvh"
     >
-      <h1 class="text-center text-4xl font-mono font-bold">
-        MarkThisDown<br /> Editor
-      </h1>
-      <h2 class="text-center text-slate-300">The minimalist, local-only, markdown editor with frontmatter support (yaml/toml).</h2>
-      <a
-        href="#"
-        class="text-center block w-max mx-auto border-2 px-8 py-2 rounded-xl border-slate-300"
+      <header class="p-4 border-b border-neutral-800">
+        <div class="container mx-auto">
+          <span class="font-medium text-slate-300">[M] MarkThisDown</span>
+        </div>
+      </header>
+      <main
+        class="grid grid-cols-[minmax(100px,_1fr)_minmax(20px,_50px)_minmax(200px,_6fr)_minmax(25px,_50px)_minmax(100px,_1fr)] grid-rows-[minmax(100px,_1fr)_minmax(20px,_50px)_minmax(200px,_6fr)_minmax(25px,_50px)_minmax(100px,_1fr)] w-full min-h-full divide-x divide-y divide-neutral-800"
       >
-        Download v0.1.0
-      </a>
+        <!-- Row 1 -->
+        <div></div>
+        <div class="bg-pattern"></div>
+        <div></div>
+        <div class="bg-pattern"></div>
+        <div></div>
+        <!-- Row 2 -->
+        <div class="bg-pattern"></div>
+        <div class="bg-pattern"></div>
+        <div class="bg-pattern"></div>
+        <div class="bg-pattern"></div>
+        <div class="bg-pattern"></div>
+        <!-- Row 3 -->
+        <div></div>
+        <div class="bg-pattern"></div>
+        <div
+          class="bg-linear-to-br from-slate-800 to-neutral-800 transition-colors duration-300 ease-in-out p-3 ring ring-neutral-700"
+        >
+          <div
+            class="bg-radial-[at_80%_90%] from-neutral-800 to-neutral-900 to-50% border border-neutral-600 rounded-3xl size-full p-3 place-content-center text-center"
+          >
+            <h1 class="text-6xl font-mono font-semibold text-neutral-200">
+              MarkThisDown<br /> Editor
+            </h1>
+            <h2 class="text-neutral-400 max-w-[45ch] mx-auto mb-8">
+              The minimalist, local-only, markdown editor with frontmatter support (yaml/toml).
+            </h2>
+            <a
+              href="#"
+              download="#"
+              class="text-white border bg-neutral-800 border-slate-500 rounded-xl px-8 py-3 block w-max mx-auto hover:bg-slate-500/50 hover:border-slate-400 transition-all duration-300 ease-in-out hover:text-slate-200 shadow-lg shadow-slate-500/30 hover:shadow-xl"
+            >
+              Download v0.1.0
+            </a>
+          </div>
+        </div>
+        <div class="bg-pattern"></div>
+        <div></div>
+        <!-- Row 4 -->
+        <div class="bg-pattern"></div>
+        <div class="bg-pattern"></div>
+        <div class="bg-pattern"></div>
+        <div class="bg-pattern"></div>
+        <div class="bg-pattern"></div>
+        <!-- Row 5 -->
+        <div></div>
+        <div class="bg-pattern"></div>
+        <div></div>
+        <div class="bg-pattern"></div>
+        <div class="border-b border-neutral-800"></div>
+      </main>
+      <footer class="p-4 text-neutral-500">
+        <div class="container mx-auto flex justify-between items-end">
+          <p>&copy; 2025 Edward Vonschondorf. All rights reserved.</p>
+          <a
+            href="https://edward-vonschondorf.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-neutral-400 hover:text-orange-600 transition-colors ease-in-out duration-300"
+            >edward-vonschondorf.dev</a
+          >
+        </div>
+      </footer>
     </div>
   </body>
 </html>

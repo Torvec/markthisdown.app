@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+.bg-pattern {
+    @apply bg-[image:repeating-linear-gradient(135deg,_var(--color-neutral-800)_0,_var(--color-neutral-800)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed 
+}

@@ -6,7 +6,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "format": "prettier --write .",
+    "deploy": "astro build && npx wrangler@latest deploy"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.11",
