@@ -1,5 +1,8 @@
 ---
+import { Image } from "astro:assets";
 import "../styles/global.css";
+import GitHub from "../assets/github.svg";
+import MarkThisDownImage from "../assets/markthisdown_screenshot.jpg";
 ---
 
 <html lang="en">
@@ -14,13 +17,21 @@ import "../styles/global.css";
     <div
       class="grid grid-cols-1 grid-rows-[minmax(30px,_60px)_minmax(400px,_6fr)_minmax(30px,_60px)] min-h-dvh"
     >
-      <header class="p-4 border-b border-neutral-800">
-        <div class="container mx-auto">
-          <span class="font-medium text-slate-300">[M] MarkThisDown</span>
-        </div>
+      <header class="py-4 px-8 border-b border-neutral-800 flex justify-between items-center">
+        <span class="font-medium text-slate-300">[M] MarkThisDown</span>
+        <a
+          href="https://github.com/Torvec/markthisdown/"
+          target="_blank"
+          rel="noopener noreferrer external"
+          class="block shadow-lg shadow-slate-500/30 hover:shadow-xl"
+        >
+          <GitHub
+            class="text-slate-300 hover:scale-110 transition-all hover:text-slate-50 duration-300 ease-in-out"
+          />
+        </a>
       </header>
       <main
-        class="grid grid-cols-[minmax(100px,_1fr)_minmax(20px,_50px)_minmax(200px,_6fr)_minmax(25px,_50px)_minmax(100px,_1fr)] grid-rows-[minmax(100px,_1fr)_minmax(20px,_50px)_minmax(200px,_6fr)_minmax(25px,_50px)_minmax(100px,_1fr)] w-full min-h-full divide-x divide-y divide-neutral-800"
+        class="grid grid-cols-[minmax(0,1fr)_minmax(0,50px)_minmax(300px,6fr)_minmax(0,50px)_minmax(0,1fr)] grid-rows-[minmax(0,1fr)_minmax(0,50px)_minmax(300px,6fr)_minmax(0,50px)_minmax(0,1fr)] w-full min-h-full divide-x divide-y divide-neutral-800"
       >
         <!-- Row 1 -->
         <div></div>
@@ -41,21 +52,37 @@ import "../styles/global.css";
           class="bg-linear-to-br from-slate-800 to-neutral-800 transition-colors duration-300 ease-in-out p-3 ring ring-neutral-700"
         >
           <div
-            class="bg-radial-[at_80%_90%] from-neutral-800 to-neutral-900 to-50% border border-neutral-600 rounded-3xl size-full p-3 place-content-center text-center"
+            class="relative overflow-hidden bg-radial-[at_20%_10%] from-slate-800 to-neutral-950 to-50% border border-neutral-600 rounded-3xl size-full p-3 place-content-center text-center"
           >
-            <h1 class="text-6xl font-mono font-semibold text-neutral-200">
-              MarkThisDown<br /> Editor
-            </h1>
-            <h2 class="text-neutral-400 max-w-[45ch] mx-auto mb-8">
-              The minimalist, local-only, markdown editor with frontmatter support (yaml/toml).
-            </h2>
-            <a
-              href="#"
-              download="#"
-              class="text-white border bg-neutral-800 border-slate-500 rounded-xl px-8 py-3 block w-max mx-auto hover:bg-slate-500/50 hover:border-slate-400 transition-all duration-300 ease-in-out hover:text-slate-200 shadow-lg shadow-slate-500/30 hover:shadow-xl"
+            <div
+              class="absolute top-10 left-1/2 -translate-x-1/2 z-0 w-full grid grid-cols-1 grid-rows-1"
             >
-              Download v0.1.0
-            </a>
+              <Image
+                src={MarkThisDownImage}
+                alt=""
+                class="w-max h-auto mx-auto col-start-1 row-start-1 ring-2 ring-neutral-800"
+                aria-label="hidden"
+              />
+              <div
+                class="bg-linear-to-b from-transparent to-neutral-800 to-60% size-full col-start-1 row-start-1"
+              >
+              </div>
+            </div>
+            <div class="relative z-10 translate-y-5/6">
+              <h1 class="text-4xl md:text-6xl font-mono font-semibold text-neutral-200">
+                MarkThisDown<br /> Editor
+              </h1>
+              <h2 class="text-neutral-400 max-w-[45ch] mx-auto mb-8">
+                The minimalist, local-only, markdown editor with frontmatter support (yaml/toml).
+              </h2>
+              <a
+                href="#"
+                download="#"
+                class="text-white border bg-neutral-800 border-slate-500 rounded-xl px-8 py-3 block w-max mx-auto hover:bg-slate-500/50 hover:border-slate-400 transition-all duration-300 ease-in-out hover:text-slate-200 shadow-lg shadow-slate-500/30 hover:shadow-xl"
+              >
+                Download v0.1.0 (Win)
+              </a>
+            </div>
           </div>
         </div>
         <div class="bg-pattern"></div>
@@ -73,17 +100,18 @@ import "../styles/global.css";
         <div class="bg-pattern"></div>
         <div class="border-b border-neutral-800"></div>
       </main>
-      <footer class="p-4 text-neutral-500">
-        <div class="container mx-auto flex justify-between items-end">
-          <p>&copy; 2025 Edward Vonschondorf. All rights reserved.</p>
-          <a
-            href="https://edward-vonschondorf.dev"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-neutral-400 hover:text-orange-600 transition-colors ease-in-out duration-300"
-            >edward-vonschondorf.dev</a
-          >
-        </div>
+      <footer
+        class="py-4 px-8 text-neutral-500 space-y-2 md:space-y-0 md:flex md:justify-between md:items-center text-center"
+      >
+        <p>&copy; 2025 Edward Vonschondorf. All rights reserved.</p>
+        <a
+          href="https://edward-vonschondorf.dev"
+          target="_blank"
+          rel="noopener noreferrer external"
+          class="text-neutral-400 hover:text-orange-600 transition-colors ease-in-out duration-300"
+        >
+          edward-vonschondorf.dev
+        </a>
       </footer>
     </div>
   </body>
