@@ -1,6 +1,6 @@
 {
   "name": "markthisdown-app",
-  "compatibility_date": "2025-07-07",
+  "compatibility_date": "2025-07-10",
   "assets": {
     "directory": "./dist"
   }
