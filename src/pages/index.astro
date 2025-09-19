@@ -52,13 +52,14 @@ import MarkThisDownImage from "../assets/markthisdown_screenshot.jpg";
           class="bg-linear-to-br from-slate-800 to-neutral-800 transition-colors duration-300 ease-in-out p-3 ring ring-neutral-700"
         >
           <div
-            class="relative overflow-hidden bg-radial-[at_20%_10%] from-slate-800 to-neutral-950 to-50% border border-neutral-600 rounded-3xl size-full p-3 place-content-center text-center"
+            class="relative overflow-hidden bg-radial-[at_20%_10%] from-slate-800 to-neutral-950 to-50% border border-neutral-600 rounded-3xl size-full p-3 place-content-center md:place-content-end text-center"
           >
+            <!--  Background image, Gray gradient -->
             <div
-              class="absolute top-10 left-1/2 -translate-x-1/2 z-0 w-full grid grid-cols-1 grid-rows-1"
+              class="absolute top-10 left-1/2 -translate-x-1/2 z-0 size-full grid grid-cols-1 grid-rows-1"
             >
               <div
-                class="bg-linear-to-b from-transparent to-neutral-800 to-60% size-full col-start-1 row-start-1 z-10"
+                class="bg-linear-to-b from-transparent to-neutral-800 to-60% size-full md:w-full md:h-auto col-start-1 row-start-1 z-10"
               >
               </div>
               <Image
@@ -68,7 +69,8 @@ import MarkThisDownImage from "../assets/markthisdown_screenshot.jpg";
                 aria-label="hidden"
               />
             </div>
-            <div class="relative z-10 translate-y-5/6">
+            <!-- Title, Tag Line, Download Button -->
+            <div class="relative z-10 md:-translate-y-32">
               <h1 class="text-4xl md:text-6xl font-mono font-semibold text-neutral-200">
                 MarkThisDown<br /> Editor
               </h1>
